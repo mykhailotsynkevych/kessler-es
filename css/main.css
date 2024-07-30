@@ -186,7 +186,7 @@ link {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   color: var(--title-text-color);
   font-weight: 500;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 16px;
   letter-spacing: 0.02em;
 }
@@ -251,7 +251,7 @@ link {
   align-items: center;
   color: var(--text-color);
   font-weight: 500;
-  font-size: 14px;
+  font-size: 15px;
   line-height: 1.15;
   letter-spacing: 0.02em;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -586,7 +586,7 @@ link {
 .features__title {
   font-style: normal;
   font-weight: 700;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
@@ -599,7 +599,7 @@ link {
 }
 
 .features__description {
-  font-size: 14px;
+  font-size: 15px;
   line-height: 1.71;
   color: var(--text-color);
   letter-spacing: 0.03em;
