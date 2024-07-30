@@ -1,8 +1,6 @@
 .footer {
   background-color: #2f303a;
-
-  padding-top: 60px;
-  padding-bottom: 60px;
+  padding: 46px 0px;
 
   @media screen and (max-width: 479px) {
     width: 100%;
@@ -13,7 +11,7 @@
   }
 }
 
-.footer_container {
+.footer__wrapper {
   @media screen and (max-width: 767px) {
     display: flex;
     flex-direction: column;
@@ -28,7 +26,7 @@
 
   @media screen and (min-width: 1200px) {
     display: flex;
-    align-items: baseline;
+    align-items: center;
     justify-content: space-between;
     padding-left: 0px;
     padding-right: 0px;
@@ -48,9 +46,6 @@
     align-items: center;
   }
 }
-.main-logo-link + .address {
-  margin-top: 20px;
-}
 
 .contact__map {
   @media screen and (min-width: 1200px) {
@@ -64,18 +59,16 @@
   line-height: 1.7;
 }
 
-.contact__map + .address__email {
-  margin-top: 9px;
-}
-
-.address__email + .address__tel {
-  margin-top: 9px;
-}
-
 .address {
+    width: 100%;
+
   &-list {
+    width: 100%;
+    justify-content: space-evenly;
     display: flex;
-    
+    align-items: center;
+
+
     @media screen and (max-width: 1199px) {
       display: flex;
       flex-direction: column;
@@ -99,6 +92,8 @@
     }
   }
 }
+
+
 
 /*SUBSCRIBE*/
 
