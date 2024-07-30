@@ -1,44 +1,78 @@
 /*HERO*/
 
 .hero-section {
-  @media screen and (max-width: 399px) {
-    padding-top: 70px;
-    padding-bottom: 70px;
-  }
+    &--overlay {
+      max-width: 1600px;
+      margin: 0 auto;
+      width: 100%;
+      background-color: #c4c4c4;
+    
+      background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url(../images/hero/hero_mob.jpg);
+    
+      background-position: center;
+      background-size: cover;
+    
+      @media screen and (min-width: 400px) {
+        background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+          url(../images/hero/hero_tab.jpg);
+      }
+    
+      @media screen and (min-width: 1200px) {
+        background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+          url(../images/hero-foto.jpg);
+      }
+    } 
 
-  @media screen and (min-width: 400px) and (max-width: 1199px) {
-    padding-top: 118px;
-    padding-bottom: 118px;
-  }
+    @media screen and (max-width: 399px) {
+      padding-top: 70px;
+      padding-bottom: 70px;
+    }
+  
+    @media screen and (min-width: 400px) and (max-width: 1199px) {
+      padding-top: 118px;
+      padding-bottom: 118px;
+    }
+  
+    @media screen and (min-width: 1200px) {
+      padding-top: 200px;
+      padding-bottom: 200px;
+    }
 
-  @media screen and (min-width: 1200px) {
-    padding-top: 200px;
-    padding-bottom: 200px;
-  }
-}
+    &__title {
+      color: var(--primary-white-color);
+    
+      font-weight: 700;
+    
+      text-align: center;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    
+      margin-left: auto;
+      margin-right: auto;
+    
+      margin-bottom: 30px;
+    
+      @media screen and (max-width: 767px) {
+        font-size: 26px;
+        line-height: 1.6;
+      }
+    
+      @media screen and (min-width: 768px) {
+        font-size: 26px;
+        line-height: 1.6;
+      }
+      
+      @media screen and (min-width: 1200px) {
+        font-size: 44px;
+        line-height: 1.36;
+      }
+    }
 
-.hero-section--overlay {
-  max-width: 1600px;
-  margin: 0 auto;
-
-  width: 100%;
-  background-color: #c4c4c4;
-
-  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-    url(../images/hero/hero_mob.jpg);
-
-  background-position: center;
-  background-size: cover;
-
-  @media screen and (min-width: 400px) {
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-      url(../images/hero/hero_tab.jpg);
-  }
-
-  @media screen and (min-width: 1200px) {
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-      url(../images/hero-foto.jpg);
-  }
+    &__button {
+      margin-left: auto;
+      margin-right: auto;
+    }
 }
 
 @media screen and (min-device-pixel-ratio: 2),
@@ -60,46 +94,12 @@
   }
 }
 
-.hero-section__title {
-  color: var(--primary-white-color);
-
-  font-weight: 700;
-
-  text-align: center;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-
-  margin-left: auto;
-  margin-right: auto;
-
-  margin-bottom: 30px;
-
-  @media screen and (max-width: 767px) {
-    font-size: 26px;
-    line-height: 1.6;
-  }
-
-  @media screen and (min-width: 768px) {
-    font-size: 26px;
-    line-height: 1.6;
-  }
-  
-  @media screen and (min-width: 1200px) {
-    font-size: 44px;
-    line-height: 1.36;
-  }
-}
-
 .button {
   display: flex;
   align-items: center;
   justify-content: center;
 
   min-width: 200px;
-
-  margin-left: auto;
-  margin-right: auto;
-
   padding: 10px 32px;
 
   color: var(--primary-white-color);
@@ -139,9 +139,11 @@
     display: block;
   }
 
-  @media screen and (min-width: 768px) and (max-width: 1199px) {
+  @media screen and (min-width: 768px) {
     flex-wrap: wrap;
-    margin: -15px;
+    justify-content: space-between;
+    margin: 0px;
+    row-gap: 30px;
   }
 }
 
@@ -158,7 +160,7 @@
   }
 
   @media screen and (min-width: 1200px) {
-    width: 270px;
+    width: 360px;
     margin: 0px;
   }
 }
@@ -174,20 +176,28 @@
     background-color: #f5f4fa;
   }
 
-  &--antenna::before {
-    background-image: url(../images/css-images/antenna.svg);
+  &--repair::before {
+    background-image: url(../images/service-icons/repair.svg);
   }
 
-  &--clock::before {
-    background-image: url(../images/css-images/clock.svg);
+  &--montage::before {
+    background-image: url(../images/service-icons/montage.svg);
   }
 
-  &--diagram::before {
-    background-image: url(../images/css-images/diagram.svg);
+  &--security::before {
+    background-image: url(../images/service-icons/security.svg);
   }
 
-  &--astronaut::before {
-    background-image: url(../images/css-images/astronaut.svg);
+  &--installation::before {
+    background-image: url(../images/service-icons/installation.svg);
+  }
+
+  &--steel::before {
+    background-image: url(../images/service-icons/steel.svg);
+  }
+
+  &--toolbox::before {
+    background-image: url(../images/service-icons/toolbox.svg);
   }
 }
 
@@ -210,22 +220,22 @@
   }
 }
 
-.features__item + .features__item {
-  margin-left: 30px;
+// .features__item + .features__item {
+//   margin-left: 30px;
 
-  @media screen and (max-width: 767px) {
-    margin-left: 0px;
-    margin-top: 30px;
-  }
+//   @media screen and (max-width: 767px) {
+//     margin-left: 0px;
+//     margin-top: 30px;
+//   }
 
-  @media screen and (min-width: 768px) and (max-width: 1199px) {
-    margin-left: 15px;
-  }
+//   @media screen and (min-width: 768px) and (max-width: 1199px) {
+//     margin-left: 15px;
+//   }
 
-  @media screen and (min-width: 1200px) {
-    margin-left: 30px;
-  }
-}
+//   @media screen and (min-width: 1200px) {
+//     margin-left: 30px;
+//   }
+// }
 
 .features__description {
   font-size: 14px;

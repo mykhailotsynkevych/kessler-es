@@ -20,16 +20,19 @@
   <body>
     <!-- HEADER -->
     <header class="page-header page-header--underline">
-      <div class="page-header__positioning container">
+      <div class="page-header__container container">
+        <a href="./index.html" class="main-logo-link">
+          <div>
+            Vitali<span class="main-logo-link--black">Kessler</span>
+          </div>
+        <span class="main-logo-link--grey">Renovierung&Reparatur</span>
+        </a>
         <nav class="main-nav">
-          <a href="./index.html" class="main-logo-link">
-          Vitali<span class="main-logo-link--black">Kessler</span>
-          </a>
 
           <ul class="main-nav__list list">
-            <li class="main-nav__item"><a href="./index.html" class="main-nav__link link main-nav__link--current-page">Студия</a></li>
-            <li class="main-nav__item"><a href="./portfolio.html" class="main-nav__link link">Портфолио</a></li>
-            <li class="main-nav__item"><a href="" class="main-nav__link link">Контакты</a></li>
+            <li class="main-nav__item"><a href="#service" class="main-nav__link link">Dienstleistung</a></li>
+            <li class="main-nav__item"><a href="#work" class="main-nav__link link">Referenzen</a></li>
+            <li class="main-nav__item"><a href="#about" class="main-nav__link link">Über mich/Team</a></li>
           </ul>
 
 
@@ -87,41 +90,55 @@
       <section class="hero-section hero-section--overlay">
         <div class="container">
           <h1 class="hero-section__title">Alles Rund ums Haus, Service und Dienstleistungen</h1>
-          <button data-modal-open type="button" class="button hero-section__button--positioning">Angebot einholen</button>
+          <button data-modal-open type="button" class="button hero-section__button">Angebot einholen</button>
         </div>
       </section>
 
       <!-- FEATURES -->
       <section class="features section">
         <div class="container">
-          <h2 class="section__title visually-hidden">Reparature service</h2>
+          <h2 id="service" class="section__title visually-hidden">Dienstleistung</h2>
           <ul class="features__list list">
             <li class="features__item">
-              <div class="features__icon features__icon--antenna"></div>
-              <h3 class="features__title">Внимание к деталям</h3>
+              <div class="features__icon features__icon--repair"></div>
+              <h3 class="features__title">Reparaturservice</h3>
               <p class="features__description">
-                Идейные соображения, а также начало повседневной работы по формированию позиции.
+                Schnelle und hochwertige Hausreparatur.
               </p>
             </li>
             <li class="features__item">
-              <div class="features__icon features__icon--clock"></div>
-              <h3 class="features__title">Пунктуальность</h3>
+              <div class="features__icon features__icon--montage"></div>
+              <h3 class="features__title">Montageleistungen</h3>
               <p class="features__description">
-                Задача организации, в особенности же рамки и место обучения кадров влечет за собой.
+                Professionelle Dienste für die Installation und Montage von Einrichtungen und Anlagen.
               </p>
             </li>
             <li class="features__item">
-              <div class="features__icon features__icon--diagram"></div>
-              <h3 class="features__title">Планирование</h3>
+              <div class="features__icon features__icon--security"></div>
+              <h3 class="features__title">Sicherheitstechnik</h3>
               <p class="features__description">
-                Равным образом консультация с широким активом в значительной степени обуславливает.
+                Technik und Systeme für Sicherheit und Schutz in privaten sowie öffentlichen Bereichen..
               </p>
             </li>
             <li class="features__item">
-              <div class="features__icon features__icon--astronaut"></div>
-              <h3 class="features__title">Современные технологии</h3>
+              <div class="features__icon features__icon--installation"></div>
+              <h3 class="features__title">Installationarbeiten</h3>
               <p class="features__description">
-                Значимость этих проблем настолько очевидна, что реализация плановых заданий.
+                Spezialisierte Dienstleistungen für die fachgerechte Einrichtung und Installation technischer Systeme.
+              </p>
+            </li>
+            <li class="features__item">
+              <div class="features__icon features__icon--steel"></div>
+              <h3 class="features__title">Stahlarbeiten</h3>
+              <p class="features__description">
+                Die Bearbeitung und Konstruktion von Objekten und Strukturen aus Stahl..
+              </p>
+            </li>
+            <li class="features__item">
+              <div class="features__icon features__icon--toolbox"></div>
+              <h3 class="features__title">Hausmeister - und Winterdienst</h3>
+              <p class="features__description">
+                Dienstleistungen zur Instandhaltung von Immobilien und zur Schneeräumung während der Wintermonate..
               </p>
             </li>
           </ul>
@@ -131,7 +148,7 @@
       <!-- OUR WORK -->
       <section class="our-work section">
         <div class="container">
-          <h2 class="section__title">Чем мы занимаемся</h2>
+          <h2 id="work" class="section__title">Чем мы занимаемся</h2>
           <ul class="our-work__examples-list list">
             <li class="our-work__example">
               <img  class="example__image"
@@ -164,10 +181,10 @@
         </div>
       </section>
 
-      <!-- OUR TEAM -->
+      <!-- ABOUT ME -->
       <section class="section our-team">
         <div class="container">
-          <h2 class="section__title">Наша команда</h2>
+          <h2 id="about" class="section__title">Über mich/Team</h2>
           <ul class="our-team__workers-list list">
             <li class="our-team__worker">
               <img class="worker__foto"
@@ -374,7 +391,7 @@
       </section>
 
       <!-- REGULAR CLIENTS -->
-      <section class="section regular-clients">
+      <!-- <section class="section regular-clients">
         <div class="container">
           <h2 class="section__title">Постоянные клиенты</h2>
           <ul class="regular-clients__list list">
@@ -410,15 +427,17 @@
             </li>
           </ul>
         </div>
-      </section>
+      </section> -->
 
       <!-- FOOTER -->
       <footer class="footer">
-        <div class="footer_container container">
-          <div class="footer-container">
-          <a href="./index.html" class="main-logo-link">Vitali<span class="main-logo-link--white">Kessler</span>
+        <div class="footer_container container">      
+          <a href="./index.html" class="main-logo-link">
+            <div>
+              Vitali<span class="main-logo-link--white">Kessler</span>
+            </div>
+          <span class="main-logo-link--silver">Renovierung&Reparatur</span>
           </a>
-      
             <address class="address">
               <ul class="address-list list">
                 <li class="contact__map">
@@ -433,43 +452,8 @@
                 </li>
               </ul>
             </address>
-          </div>
 
-          <!-- <div class="join__container">
-            <h3 class="join__title">Присоидиняйтесь</h3>
-            <ul class="join-social-links list">
-              <li class="join-social-links__item">
-                <a href="#" class="join-social__link">
-                  <svg width="20" height="20" class="">
-                    <use href="./images/symbol-defs.svg#icon-instagram" class=""></use>
-                  </svg>
-                </a>
-              </li>
-
-              <li class="join-social-links__item">
-                <a href="#" class="join-social__link">
-                  <svg width="20" height="20" class="">
-                    <use href="./images/symbol-defs.svg#icon-twitter" class=""></use>
-                  </svg></a>
-              </li>
-
-              <li class="join-social-links__item">
-                <a href="#" class="join-social__link">
-                  <svg width="20" height="20" class="">
-                    <use href="./images/symbol-defs.svg#icon-facebook" class=""></use>
-                  </svg></a>
-              </li>
-
-              <li class="join-social-links__item">
-                <a href="#" class="join-social__link">
-                  <svg width="20" height="20" class="">
-                    <use href="./images/symbol-defs.svg#icon-linkedin" class=""></use>
-                  </svg></a>
-              </li>
-            </ul>
-          </div> -->
-
-          <button data-modal-open type="button" class="button hero-section__button--positioning">Angebot einholen</button>
+          <button data-modal-open type="button" class="button">Angebot einholen</button>
         </div>
       </footer>
 
@@ -530,5 +514,6 @@
     </main>
     <script src="./js/mobile-menu.js"></script>
     <script src="./js/modal.js"></script>
+    <script src="./js/smooth-scroll.js"></script>
   </body>
 </html>
