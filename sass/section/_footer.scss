@@ -1,28 +1,25 @@
 .footer {
   background-color: #2f303a;
-  padding: 46px 0px;
+  padding: 34px 0px;
 
-  @media screen and (max-width: 479px) {
-    width: 100%;
-  }
-
-  @media screen and (min-width: 480px) and (max-width: 767px) {
-    min-width: 480px;
+  @media screen and (min-width: 1200px) {
+    padding: 46px 0px;
   }
 
   &__wrapper {
     display: flex;
+    align-items: center;
+
     @media screen and (max-width: 767px) {
       flex-direction: column;
     }
 
     @media screen and (min-width: 768px) and (max-width: 1199px) {
       justify-content: space-evenly;
-      align-items: baseline;
+      align-items: flex-start;
     }
-    
+
     @media screen and (min-width: 1200px) {
-      flex-wrap: wrap;
       align-items: center;
       justify-content: space-between;
       padding-left: 0px;
@@ -32,6 +29,10 @@
 
   &-address {
     width: 100%;
+
+    @media screen and (max-width: 767px) {
+      margin: 24px 0px;
+    }
 
     &__list {
       width: 100%;
@@ -47,19 +48,6 @@
       }
     }
 
-    &__icon {
-      &::before {
-        content: '';
-        display: block;
-        width: 20px;
-        height: 20px;
-        margin-right: 10px;
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: contain;
-      }
-    }
-
     &__map-link {
       display: flex;
       transition: all 0.3s ease;
@@ -67,10 +55,6 @@
       font-style: normal;
       font-size: 15px;
       line-height: 1.7;
-
-      &::before {
-        background-image: url(../images/location-icon.svg);
-      }
 
       &:hover {
         opacity: 0.75;
@@ -81,9 +65,9 @@
       display: flex;
       color: var(--text-color);
       font-style: normal;
-      font-size: 14px;
+      font-size: 15px;
       line-height: 1.7;
-      color: rgba(255, 255, 255, 0.6);
+      color: var(--silver);
       transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
       &:hover,
@@ -92,30 +76,4 @@
       }
     }
   }
-}
-
-.subscribe__form {
-  display: flex;
-
-  @media screen and (max-width: 767px) {
-    display: block;
-  }
-
-  @media screen and (min-width: 768px) and (max-width: 1199px) {
-    display: block;
-  }
-}
-
-.subscribe__email-input + .button {
-  margin-left: 12px;
-
-  @media screen and (max-width: 1199px) {
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 20px;
-  }
-}
-
-.button svg {
-  margin-left: 10px;
 }

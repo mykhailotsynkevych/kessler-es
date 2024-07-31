@@ -124,7 +124,6 @@
     flex-wrap: wrap;
     justify-content: space-between;
     margin: -15px;
-    row-gap: 15px;
   }
 
   @media screen and (min-width: 1200px) {
@@ -136,8 +135,11 @@
 .features__item {
   @media screen and (max-width: 767px) {
     width: 100%;
-
     margin-left: 0px;
+
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
   }
 
   @media screen and (min-width: 768px) {
@@ -156,10 +158,14 @@
     content: '';
     display: block;
     height: 120px;
-    margin-bottom: 30px;
+    margin-bottom: 24px;
     background-repeat: no-repeat;
     background-position: center;
     background-color: #f5f4fa;
+  }
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 30px;
   }
 
   &--repair::before {
