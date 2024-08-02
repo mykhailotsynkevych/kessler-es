@@ -1,78 +1,78 @@
 /*HERO*/
 
 .hero-section {
-    &--overlay {
-      max-width: 1600px;
-      margin: 0 auto;
-      width: 100%;
-      background-color: #c4c4c4;
-    
+  &--overlay {
+    max-width: 1600px;
+    margin: 0 auto;
+    width: 100%;
+    background-color: #c4c4c4;
+
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.6), rgba(47, 48, 58, 0.6)),
+      url(../images/hero_mob.jpg);
+
+    background-position: center;
+    background-size: cover;
+
+    @media screen and (min-width: 400px) {
       background-image: linear-gradient(to right, rgba(47, 48, 58, 0.6), rgba(47, 48, 58, 0.6)),
-        url(../images/hero_mob.jpg);
-    
-      background-position: center;
-      background-size: cover;
-    
-      @media screen and (min-width: 400px) {
-        background-image: linear-gradient(to right, rgba(47, 48, 58, 0.6), rgba(47, 48, 58, 0.6)),
-          url(../images/hero_tab.jpg);
-      }
-    
-      @media screen and (min-width: 1200px) {
-        background-image: linear-gradient(to right, rgba(47, 48, 58, 0.6), rgba(47, 48, 58, 0.6)),
-          url(../images/hero-foto.jpg);
-      }
-    } 
+        url(../images/hero_tab.jpg);
+    }
 
-    @media screen and (max-width: 399px) {
-      padding-top: 70px;
-      padding-bottom: 70px;
-    }
-  
-    @media screen and (min-width: 400px) and (max-width: 1199px) {
-      padding-top: 118px;
-      padding-bottom: 118px;
-    }
-  
     @media screen and (min-width: 1200px) {
-      padding-top: 200px;
-      padding-bottom: 200px;
+      background-image: linear-gradient(to right, rgba(47, 48, 58, 0.6), rgba(47, 48, 58, 0.6)),
+        url(../images/hero-foto.jpg);
+    }
+  }
+
+  @media screen and (max-width: 399px) {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+
+  @media screen and (min-width: 400px) and (max-width: 1199px) {
+    padding-top: 118px;
+    padding-bottom: 118px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    padding-top: 200px;
+    padding-bottom: 200px;
+  }
+
+  &__title {
+    color: var(--primary-white-color);
+
+    font-weight: 700;
+
+    text-align: center;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    margin-bottom: 30px;
+
+    @media screen and (max-width: 767px) {
+      font-size: 26px;
+      line-height: 1.6;
     }
 
-    &__title {
-      color: var(--primary-white-color);
-    
-      font-weight: 700;
-    
-      text-align: center;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-    
-      margin-left: auto;
-      margin-right: auto;
-    
-      margin-bottom: 30px;
-    
-      @media screen and (max-width: 767px) {
-        font-size: 26px;
-        line-height: 1.6;
-      }
-    
-      @media screen and (min-width: 768px) {
-        font-size: 26px;
-        line-height: 1.6;
-      }
-      
-      @media screen and (min-width: 1200px) {
-        font-size: 44px;
-        line-height: 1.36;
-      }
+    @media screen and (min-width: 768px) {
+      font-size: 26px;
+      line-height: 1.6;
     }
 
-    &__button {
-      margin-left: auto;
-      margin-right: auto;
+    @media screen and (min-width: 1200px) {
+      font-size: 44px;
+      line-height: 1.36;
     }
+  }
+
+  &__button {
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 .button {
@@ -219,7 +219,76 @@
   letter-spacing: 0.03em;
 }
 
-/*Чем мы занимаемся*/
+/* STATISTIC */
+.statistic {
+  margin-bottom: 94px;
+  background-color: var(--accent-color);
+
+  &__list {
+    padding: 40px 0px;
+    display: flex;
+    justify-content: space-between;
+    @media screen and (min-width: 768px) {
+      padding: 60px 0px;
+      justify-content: space-around;
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--primary-white-color);
+
+    &-number {
+      display: flex;
+      align-items: center;
+      font-size: 40px;
+
+      &-symbol {
+        font-size: 28px;
+      }
+    }
+
+    &-text {
+      margin-top: -10px;
+      font-size: 10px;
+      line-height: 1.5;
+    }
+
+    @media screen and (min-width: 768px) {
+      &-number {
+        font-size: 64px;
+
+        &-symbol {
+          font-size: 48px;
+        }
+      }
+
+      &-text {
+        margin-top: -14px;
+        font-size: 16px;
+      }
+    }
+
+    @media screen and (min-width: 1200px) {
+      &-number {
+        font-size: 72px;
+
+        &-symbol {
+          font-size: 60px;
+        }
+      }
+
+      &-text {
+        margin-top: -16px;
+        font-size: 18px;
+      }
+    }
+  }
+}
+
+/* REFERENZE */
 
 .our-work {
   @media screen and (max-width: 1199px) {

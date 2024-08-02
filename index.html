@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Vitali Kessler" content="Alles Rund ums Haus, Service und Dienstleistungen">
+    <meta name="theme-color" content="#2196f3" />
     <title>Renovierungen und Reparaturen aller Art</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -35,6 +37,31 @@
               <li class="main-nav__item"><a href="#work" class="main-nav__link link">Referenzen</a></li>
               <li class="main-nav__item"><a href="#about" class="main-nav__link link">Über mich</a></li>
             </ul>
+
+            <button type="button" class="menu-button" data-menu-button>
+              <svg width="24" height="16" class="button__burger" aria-label="switch mobile menu">
+                <use href="./images/symbol-defs.svg#icon-burger" class="icon-menu"></use>
+                <use href="./images/symbol-defs.svg#icon-vector" width="16" height="16" class="icon-cross"></use>
+              </svg>
+              </button>
+              
+              <div class="menu-wrapper" data-menu>
+                <div class="menu-container">
+                  <ul class="mobile-menu__main-nav list">
+                    <li class="mob-menu__page"><a href="#service" class="mob-menu__link link">Service</a></li>
+                    <li class="mob-menu__page"><a href="#work" class="mob-menu__link link">Referenzen</a></li>
+                    <li class="mob-menu__page"><a href="#about" class="mob-menu__link link">Über mich</a></li>
+                  </ul>
+                  <ul class="mob-menu__contact list">
+                    <li>
+                      <a href="tel:+491778614955" class="mob-menu__tel">0177 861 4955</a>
+                    </li>
+                    <li>
+                      <a href="mailto:kessler-es@web.de" class="mob-menu__mail">kessler-es@web.de</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
           </nav>
   
   
@@ -110,6 +137,27 @@
               <p class="features__description">
                 Dienstleistungen zur Instandhaltung von Immobilien und zur Schneeräumung während der Wintermonate.
               </p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- STATISTIC -->
+      <section class="statistic">
+        <div class="container">
+          <h2 class="section__title visually-hidden">Statistic</h2>
+          <ul class="statistic__list list">
+            <li class="statistic__item">
+              <p class="statistic__item-number">300<span class="statistic__item-number-symbol">+</span></p>
+              <p class="statistic__item-text">zufriedene Kunden</p>
+            </li>
+            <li class="statistic__item">
+              <p class="statistic__item-number">30<span class="statistic__item-number-symbol">+</span></p>
+              <p class="statistic__item-text">Jahre Erfahrung</p>
+            </li>
+            <li class="statistic__item">
+              <p class="statistic__item-number">100<span class="statistic__item-number-symbol">%</span></p>
+              <p class="statistic__item-text">liebe meine Arbeit</p>
             </li>
           </ul>
         </div>
@@ -262,6 +310,7 @@
           </div>
         </div>
     </main>
+    <script src="./js/mobile-menu.js"></script>
     <script src="./js/modal.js"></script>
     <script src="./js/smooth-scroll.js"></script>
   </body>
