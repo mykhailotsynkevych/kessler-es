@@ -327,8 +327,8 @@ link {
 }
 .menu-button.is-open {
   position: fixed;
-  top: 22px;
-  right: 15px;
+  top: 25px;
+  right: 10px;
 }
 @media screen and (min-width: 768px) {
   .menu-button {
@@ -1132,6 +1132,7 @@ link {
   left: 0;
   width: 100%;
   height: 100%;
+  z-index: 3;
   opacity: 1;
   transition: opacity 1000ms, visibility 1000ms;
   background: rgba(0, 0, 0, 0.6);
