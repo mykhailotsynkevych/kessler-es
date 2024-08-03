@@ -1,57 +1,73 @@
 body {
-    background-color: var(--primary-white-color);
+  background-color: var(--primary-white-color);
 
-    color: #212121;
-    font-family: Roboto, sans-serif;
-    font-style: normal;
-    letter-spacing: 0.03em;
+  color: #212121;
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  letter-spacing: 0.03em;
 }
 
 button {
-    font-family: 'Roboto';
+  font-family: 'Roboto';
 }
 
 img {
-    display: block;
+  display: block;
 }
 
 .section {
+  margin-top: 50px;
 
-    @media screen and (max-width: 1199px) {
-        padding-bottom: 60px;
+  @media screen and (min-width: 768px) {
+    margin-top: 60px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-top: 94px;
+  }
+
+  &__title {
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: 28px;
+    line-height: 1.18;
+  
+    @media screen and (min-width: 768px) {
+      margin-bottom: 40px;
     }
-
+  
     @media screen and (min-width: 1200px) {
-        padding-bottom: 94px;
+      margin-bottom: 50px;
+      font-weight: 700;
+      font-size: 36px;
+      line-height: 1.2;
     }
-    
-
+  }
 }
 
 link {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .container {
-    padding-left: 15px;
-    padding-right: 15px;
-    margin-left: auto;
-    margin-right: auto;
-    
-    // @media screen and (max-width: 320px) {
-    //     width: 320px;
-    // }
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
 
-    @media screen and (min-width: 480px) {
-        width: 480px;
-    }
-    
-    @media screen and (min-width: 768px) {
-        width: 768px;
-    }
+  // @media screen and (max-width: 320px) {
+  //     width: 320px;
+  // }
 
-    @media screen and (min-width: 1200px) {
-        width: 1200px;
-    }
+  @media screen and (min-width: 480px) {
+    width: 480px;
+  }
 
+  @media screen and (min-width: 768px) {
+    width: 768px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 1200px;
+  }
 }

@@ -224,7 +224,7 @@
 .menu-button {
   padding: 0px;
   position: absolute;
-  top: 24px;
+  top: 22px;
   right: 0px;
   z-index: 2;
   display: inline-flex;
@@ -234,7 +234,6 @@
 
   &.is-open {
     position: fixed;
-    top: 25px;
     right: 10px;
   }
 

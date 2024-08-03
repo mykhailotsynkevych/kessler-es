@@ -17,6 +17,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
     />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./css/main.min.css">
   </head>
   <body>
@@ -147,59 +148,82 @@
       </section>
 
       <!-- STATISTIC -->
-      <section class="statistic">
-        <div class="container">
-          <h2 class="section__title visually-hidden">Statistic</h2>
-          <ul class="statistic__list list">
-            <li class="statistic__item">
-              <p class="statistic__item-number">300<span class="statistic__item-number-symbol">+</span></p>
-              <p class="statistic__item-text">zufriedene Kunden</p>
-            </li>
-            <li class="statistic__item">
-              <p class="statistic__item-number">30<span class="statistic__item-number-symbol">+</span></p>
-              <p class="statistic__item-text">Jahre Erfahrung</p>
-            </li>
-            <li class="statistic__item">
-              <p class="statistic__item-number">100<span class="statistic__item-number-symbol">%</span></p>
-              <p class="statistic__item-text">liebe meine Arbeit</p>
-            </li>
-          </ul>
+      <section class="section">
+        <div class="statistic">
+          <div class="container">
+            <h2 class="section__title visually-hidden">Statistic</h2>
+            <ul class="statistic__list list">
+              <li class="statistic__item">
+                <p class="statistic__item-number">300<span class="statistic__item-number-symbol">+</span></p>
+                <p class="statistic__item-text">zufriedene Kunden</p>
+              </li>
+              <li class="statistic__item">
+                <p class="statistic__item-number">30<span class="statistic__item-number-symbol">+</span></p>
+                <p class="statistic__item-text">Jahre Erfahrung</p>
+              </li>
+              <li class="statistic__item">
+                <p class="statistic__item-number">100<span class="statistic__item-number-symbol">%</span></p>
+                <p class="statistic__item-text">liebe meine Arbeit</p>
+              </li>
+            </ul>
+          </div>
         </div>
       </section>
 
       <!-- OUR WORK -->
       <section class="our-work section">
         <div class="container">
-          <h2 id="work" class="section__title">Referenzen</h2>
-          <ul class="our-work__examples-list list">
-            <li class="our-work__example">
-              <img  class="example__image"
-              srcset="./images/box1.jpg 370w,
-              ./images/box1-x2.jpg 740w"             
-              sizes="(min-width: 1200px) 370px"
-              src="./images/box1.jpg"
-               alt="печатает на клавиатуре"/>
-              <h3 class="example__title">Десктопные приложения</h3>
-            </li>
-            <li class="our-work__example">
+        <h2 id="work" class="section__title">Referenzen</h2>
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide our-work__example">
+                <img  class="example__image"           
+                sizes="(min-width: 1200px) 370px"
+                src="./images/expirience/example1.jpeg"
+                alt="example1"/>
+                <h3 class="example__title">Beispiel 1</h3></div>
+              <div class="swiper-slide">
+                <img class="example__image"
+                src="./images/expirience/example2.jpg"          
+                sizes="(min-width: 1200px) 370px"
+                alt="example2" />
+                <h3 class="example__title">Beispiel 2</h3>
+              </div>
+              <div class="swiper-slide">
+                <img class="example__image"
+                src="./images/box3.jpg"
+                srcset="./images/box3.jpg 370w,
+                ./images/box3-x2.jpg 740w"             
+                sizes="(min-width: 1200px) 370px"
+                alt="example3" />
+                <h3 class="example__title">Beispiel 3</h3>
+              </div>
+              <div class="swiper-slide">
               <img class="example__image"
-              src="./images/box2.jpg"
-              srcset="./images/box2.jpg 370w,
-              ./images/box2-x2.jpg 740w"             
+              src="./images/expirience/example4.jpg"        
               sizes="(min-width: 1200px) 370px"
-              alt="Телефон в руках" />
-              <h3 class="example__title">Мобильные приложения</h3>
-            </li>
-            <li class="our-work__example">
+              alt="example4" />
+              <h3 class="example__title">Beispiel 4</h3>
+              </div>
+              <div class="swiper-slide">
               <img class="example__image"
-              src="./images/box3.jpg"
-              srcset="./images/box3.jpg 370w,
-              ./images/box3-x2.jpg 740w"             
+              src="./images/expirience/example5.webp"        
               sizes="(min-width: 1200px) 370px"
-              alt="Палитра на планшете" />
-              <h3 class="example__title">Дизайнерские решения</h3>
-            </li>
-          </ul>
+              alt="example5" />
+              <h3 class="example__title">Beispiel 5</h3>
+              </div>
+              <div class="swiper-slide">
+              <img class="example__image"
+              src="./images/expirience/example6.webp"        
+              sizes="(min-width: 1200px) 370px"
+              alt="example6" />
+              <h3 class="example__title">Beispiel 6</h3>
+              </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+          </div>
         </div>
       </section>
 
@@ -320,5 +344,32 @@
     <script src="./js/mobile-menu.js"></script>
     <script src="./js/modal.js"></script>
     <script src="./js/smooth-scroll.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+      <script>
+        var swiper = new Swiper(".mySwiper", {
+          slidesPerView: 1,
+          spaceBetween: 30,
+          loop: true,
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          },
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+          },
+          breakpoints: {
+          768: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+          },
+          1200: {
+            slidesPerView: 3,
+            spaceBetween: 30,
+          },
+        },
+          
+        });
+      </script>
   </body>
 </html>
