@@ -1130,6 +1130,11 @@ link {
 .comment-area::placeholder {
   font-size: 14px;
 }
+@media screen and (min-width: 768px) {
+  .comment-area {
+    height: 120px;
+  }
+}
 
 .checkbox {
   position: absolute;
@@ -1195,6 +1200,11 @@ link {
   letter-spacing: 0.03em;
   color: var(--text-color);
   margin-bottom: 30px;
+}
+@media screen and (min-width: 768px) {
+  .form__required-text {
+    font-size: 14px;
+  }
 }
 
 @media screen and (max-width: 767px) {

@@ -200,6 +200,10 @@
   &::placeholder {
     font-size: 14px;
   }
+
+  @media screen and (min-width: 768px) {
+    height: 120px;
+  }
 }
 
 .checkbox {
@@ -273,6 +277,10 @@
   letter-spacing: 0.03em;
   color: var(--text-color);
   margin-bottom: 30px;
+
+  @media screen and (min-width: 768px) {
+    font-size: 14px;
+  }
 }
 
 .form__button {

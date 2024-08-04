@@ -291,8 +291,8 @@
       </footer>
 
         <!-- BACKDROP+MODAL -->
-        <div class="backdrop is-hidden" data-modal>
-          <div class="modal">
+        <div class="backdrop is-hidden" data-backdrop>
+          <div class="modal" data-modal>
               <button data-modal-close class="modal-close">
                 <svg width="24" height="24" class="modal-close__icon">
                   <use href="./images/sprite.svg#icon-close" class="icon-close"></use>
@@ -301,7 +301,7 @@
 
               <h3 class="modal__title">Hinterlassen Sie Ihre Daten, ich werde Sie zurückrufen.</h3>
 
-              <form class="modal__form">
+              <form class="modal__form" data-form>
                 <label class="form__lable">
                   <span class="form__title">Name*</span>
                   <input required type="text" name="name" placeholder="" class="form__input" />
@@ -328,7 +328,7 @@
               
               <label class="form__lable">
                 <span class="form__title">Nachricht</span>
-                <textarea class="comment-area form__input" name="comment" placeholder="Meine Frage"></textarea>
+                <textarea class="comment-area form__input" name="comment" placeholder="Meine Frage" required></textarea>
               </label>
               
               <label class="form__checkbox">
