@@ -92,7 +92,7 @@
       <section class="hero-section hero-section--overlay">
         <div class="container">
           <h1 class="hero-section__title">Alles Rund ums Haus, Service und Dienstleistungen</h1>
-          <button data-modal-open type="button" class="button hero-section__button">Angebot einholen</button>
+          <button data-modal-open type="button" class="button hero-section__button">Beratung einholen</button>
         </div>
       </section>
 
@@ -303,24 +303,24 @@
 
               <form class="modal__form">
                 <label class="form__lable">
-                  <span class="form__title">Name</span>
-                  <input type="text" name="name" placeholder="" class="form__input" />
+                  <span class="form__title">Name*</span>
+                  <input required type="text" name="name" placeholder="" class="form__input" />
                   <svg class="form__icon" width="18" height="18">
                     <use href="./images/symbol-defs.svg#icon-person-black"></use>
                   </svg>
                 </label>
               
                 <label class="form__lable">
-                  <span class="form__title">Telefon</span>
-                  <input type="tel" name="tel" class="form__input"/>
+                  <span class="form__title">Telefon*</span>
+                  <input required type="tel" name="tel" class="form__input"/>
                   <svg class="form__icon" width="18" height="18">
                     <use href="./images/symbol-defs.svg#icon-phone-black"></use>
                   </svg>
                 </label>
               
                 <label class="form__lable">
-                  <span class="form__title">E-Mail</span>
-                  <input type="email" name="mail" class="form__input"/>
+                  <span class="form__title">E-Mail*</span>
+                  <input required type="email" name="mail" class="form__input"/>
                   <svg class="form__icon" width="18" height="18">
                     <use href="./images/symbol-defs.svg#icon-email-black"></use>
                   </svg>
@@ -332,14 +332,16 @@
               </label>
               
               <label class="form__checkbox">
-                <input type="checkbox" name="checkbox" class="checkbox" />
+                <input required type="checkbox" name="checkbox" class="checkbox" />
                 <span class="check-icon"></span>
                 <p class="form__checkbox-text">
                   Ich erkläre mich mit der Verarbeitung der eingegebenen Daten sowie der Datenschutzerklärung einverstanden.*
                 </p>
               </label>
+
+              <p class="form__required-text">* Kennzeichnet erforderliche Felder</p>
             
-              <button type="submit" class="button">Absenden</button>
+              <button type="submit" class="button form__button">Absenden</button>
                 
               </form>
           </div>
