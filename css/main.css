@@ -178,7 +178,7 @@ link {
   display: flex;
   margin-top: -3px;
   color: var(--text-color);
-  font-size: 14px;
+  font-size: 14.2px;
   font-weight: 500;
 }
 .main-logo-link--grey svg, .main-logo-link--silver svg {
@@ -410,17 +410,19 @@ link {
 
 .mob-menu__container {
   width: 50%;
-  padding: 64px 20px 40px;
+  padding: 64px 20px;
   background-color: var(--primary-white-color);
   height: 100vh;
   transform: translateX(200%);
   transition: transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .mob-menu__main-nav {
   display: flex;
   flex-direction: column;
-  margin-bottom: 100px;
 }
 
 .mob-menu__item {
@@ -681,7 +683,7 @@ link {
 }
 .statistic__item-text {
   margin-top: -5px;
-  font-size: 13px;
+  font-size: 14px;
   line-height: 1.1;
   width: 75%;
   text-align: center;
@@ -801,127 +803,78 @@ link {
   }
 }
 
-/* OUR TEAM */
-.our-team {
+/* ABOUT ME*/
+.about-me {
   background-color: #f5f4fa;
-  padding-top: 94px;
+  padding: 60px 0px;
 }
-@media screen and (max-width: 1199px) {
-  .our-team {
+@media screen and (min-width: 1200px) {
+  .about-me {
     width: 100%;
-    padding-top: 60px;
+    padding: 94px;
   }
 }
-
-@media screen and (max-width: 767px) {
-  .section__title + .our-team__workers-list {
-    margin-top: 30px;
-  }
+.about-me__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 @media screen and (min-width: 768px) {
-  .section__title + .our-team__workers-list {
-    margin-top: 15px;
+  .about-me__wrapper {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+}
+.about-me__foto {
+  width: 100%;
+  margin-bottom: 20px;
+}
+@media screen and (min-width: 1200px) {
+  .about-me__foto {
+    margin-bottom: 0px;
+    aspect-ratio: 270/260;
+    object-fit: contain;
+    width: 235px;
   }
 }
 @media screen and (min-width: 1200px) {
-  .section__title + .our-team__workers-list {
-    margin-top: 50px;
+  .about-me__foto {
+    width: 280px;
   }
 }
-
-.our-team__workers-list {
-  display: flex;
-}
-@media screen and (max-width: 479px) {
-  .our-team__workers-list {
-    display: block;
-    margin: 0px;
-  }
-}
-@media screen and (max-width: 767px) {
-  .our-team__workers-list {
-    display: block;
-  }
-}
-@media screen and (min-width: 480px) and (max-width: 1199px) {
-  .our-team__workers-list {
-    flex-wrap: wrap;
-    margin: -15px;
-  }
-}
-
-.our-team__worker {
-  background-color: var(--primary-white-color);
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 0px 0px 4px 4px;
-}
-@media screen and (max-width: 767px) {
-  .our-team__worker:not(:last-child) {
-    margin-bottom: 30px;
-  }
-}
-@media screen and (min-width: 480px) and (max-width: 1199px) {
-  .our-team__worker {
-    margin: 15px;
-  }
-}
-
-.our-team__worker + .our-team__worker {
-  margin-left: 0px;
-}
-@media screen and (min-width: 480px) and (max-width: 767px) {
-  .our-team__worker + .our-team__worker {
-    margin-left: 15px;
-  }
-}
-@media screen and (min-width: 768px) and (max-width: 1199px) {
-  .our-team__worker + .our-team__worker {
-    margin-left: 15px;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .our-team__worker + .our-team__worker {
-    margin-left: 30px;
-  }
-}
-
-.worker__foto {
-  max-width: 100%;
-}
-@media screen and (min-width: 1200px) {
-  .worker__foto {
-    width: 270px;
-    height: 260px;
-  }
-}
-
-.worker__description {
-  padding-top: 30px;
-  padding-bottom: 30px;
-}
-@media screen and (max-width: 1199px) {
-  .worker__description {
-    padding-bottom: 24px;
-  }
-}
-
-.worker__name {
-  text-align: center;
-  font-weight: 500;
+.about-me__text {
+  margin-left: 20px;
   font-size: 16px;
-  line-height: 1.2;
-}
-
-.worker__position {
-  text-align: center;
-  font-size: 16px;
-  line-height: 1.2;
+  flex-direction: column;
+  line-height: 1.8;
   color: var(--text-color);
+  display: none;
 }
-
-.worker__name + .worker__position {
-  margin-top: 10px;
-  margin-bottom: 16px;
+@media screen and (min-width: 1200px) {
+  .about-me__text {
+    margin-left: 30px;
+    display: flex;
+  }
+}
+.about-me__text span + span {
+  margin-top: 12px;
+}
+.about-me__text-responsive {
+  font-size: 16px;
+  flex-direction: column;
+  line-height: 1.8;
+  color: var(--text-color);
+  display: block;
+}
+@media screen and (min-width: 768px) {
+  .about-me__text-responsive {
+    margin-left: 20px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .about-me__text-responsive {
+    display: none;
+  }
 }
 
 .footer {

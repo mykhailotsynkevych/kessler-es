@@ -109,17 +109,17 @@
 
   &__list {
     display: flex;
-  
+
     @media screen and (max-width: 767px) {
       display: block;
     }
-  
+
     @media screen and (min-width: 768px) {
       flex-wrap: wrap;
       justify-content: space-between;
       margin: -15px;
     }
-  
+
     @media screen and (min-width: 1200px) {
       margin: 0px;
       row-gap: 30px;
@@ -130,17 +130,17 @@
     @media screen and (max-width: 767px) {
       width: 100%;
       margin-left: 0px;
-  
+
       &:not(:last-child) {
         margin-bottom: 30px;
       }
     }
-  
+
     @media screen and (min-width: 768px) {
       width: 354px;
       margin: 15px;
     }
-  
+
     @media screen and (min-width: 1200px) {
       width: 360px;
       margin: 0px;
@@ -246,7 +246,7 @@
 
     &-text {
       margin-top: -5px;
-      font-size: 13px;
+      font-size: 14px;
       line-height: 1.1;
       width: 75%;
       text-align: center;
@@ -318,7 +318,6 @@
     &::after {
       font-size: 0px;
       color: var(--accent-color);
-
     }
 
     &:hover {
@@ -384,116 +383,75 @@
   }
 }
 
-/* OUR TEAM */
+/* ABOUT ME*/
 
-.our-team {
+.about-me {
   background-color: #f5f4fa;
-  padding-top: 94px;
-
-  @media screen and (max-width: 1199px) {
-    width: 100%;
-    padding-top: 60px;
-  }
-}
-
-.section__title + .our-team__workers-list {
-  @media screen and (max-width: 767px) {
-    margin-top: 30px;
-  }
-
-  @media screen and (min-width: 768px) {
-    margin-top: 15px;
-  }
+  padding: 60px 0px;
 
   @media screen and (min-width: 1200px) {
-    margin-top: 50px;
-  }
-}
-
-.our-team__workers-list {
-  display: flex;
-
-  @media screen and (max-width: 479px) {
-    display: block;
-    margin: 0px;
+    width: 100%;
+    padding: 94px;
   }
 
-  @media screen and (max-width: 767px) {
-    display: block;
-  }
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
-  @media screen and (min-width: 480px) and (max-width: 1199px) {
-    flex-wrap: wrap;
-    margin: -15px;
-  }
-}
-
-.our-team__worker {
-  background-color: var(--primary-white-color);
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 0px 0px 4px 4px;
-
-  @media screen and (max-width: 767px) {
-    &:not(:last-child) {
-      margin-bottom: 30px;
+    @media screen and (min-width: 768px) {
+      flex-direction: row;
+      align-items: flex-start;
     }
   }
 
-  @media screen and (min-width: 480px) and (max-width: 1199px) {
-    margin: 15px;
+  &__foto {
+
+    width: 100%;
+    margin-bottom: 20px;
+
+    @media screen and (min-width: 1200px) {
+      margin-bottom: 0px;
+      aspect-ratio: 270/260;
+      object-fit: contain;
+      width: 235px;
+    }
+    @media screen and (min-width: 1200px) {
+      width: 280px;
+    }
   }
-}
 
-.our-team__worker + .our-team__worker {
-  margin-left: 0px;
+  &__text {
+    margin-left: 20px;
+    font-size: 16px;
+    flex-direction: column;
+    line-height: 1.8;
+    color: var(--text-color);
+    display: none;
 
-  @media screen and (min-width: 480px) and (max-width: 767px) {
-    margin-left: 15px;
+    @media screen and (min-width: 1200px) {
+      margin-left: 30px;
+      display: flex;
+    }
+
+    span + span {
+      margin-top: 12px;
+    }
   }
 
-  @media screen and (min-width: 768px) and (max-width: 1199px) {
-    margin-left: 15px;
+  &__text-responsive {
+    font-size: 16px;
+    flex-direction: column;
+    line-height: 1.8;
+    color: var(--text-color);
+    display: block;
+
+    @media screen and (min-width: 768px) {
+      margin-left: 20px;
+    }
+
+    @media screen and (min-width: 1200px) {
+      display: none;
+    }
   }
-
-  @media screen and (min-width: 1200px) {
-    margin-left: 30px;
-  }
-}
-
-.worker__foto {
-  max-width: 100%;
-  @media screen and (min-width: 1200px) {
-    width: 270px;
-    height: 260px;
-  }
-}
-
-.worker__description {
-  padding-top: 30px;
-  padding-bottom: 30px;
-
-  @media screen and (max-width: 1199px) {
-    padding-bottom: 24px;
-  }
-}
-
-.worker__name {
-  text-align: center;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.2;
-}
-
-.worker__position {
-  text-align: center;
-
-  font-size: 16px;
-  line-height: 1.2;
-  color: var(--text-color);
-}
-
-.worker__name + .worker__position {
-  margin-top: 10px;
-  margin-bottom: 16px;
 }
